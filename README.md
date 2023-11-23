@@ -5,8 +5,8 @@ In this Challenge, you’ll use various techniques to train and evaluate a model
 ## Overwiew of Analysis
 
 -The purpose of the analysis is to create and evaluate the accuracy of a data model that predicts the credity worthiness of potential borrowers from peer-to-peer lending services
+-The financial data the information was on the size of the loan
 
-- The financial data the information was on the size of the loan
   -its interest rate
   -the borrower's income
   -the debt to income ratio

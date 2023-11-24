@@ -4,15 +4,18 @@ In this Challenge, you’ll use various techniques to train and evaluate a model
 
 ## Overwiew of Analysis
 
--The purpose of the analysis is to create and evaluate the accuracy of a data model that predicts the credity worthiness of potential borrowers from peer-to-peer lending services
--The financial data the information was on the size of the loan
+-The purpose of the analysis is to create and evaluate the accuracy of a data model that predicts the credit worthiness of potential borrowers from peer-to-peer lending services.
 
-  -its interest rate
-  -the borrower's income
-  -the debt to income ratio
-  -the number of accounts the borrower held
-  -derogatory marks against the borrower
-  -the total debt
+
+-The financial data the information was on the size of the loan:
+   - Interest rate
+   -  Borrower's income
+   -  Debt to Income Ratio
+   -  Number of accounts the Borrower held
+   -  Derogatory marks against the borrower
+   -  Total debt
+
+
 
 The dataset (77,537 data points) was split into training and testing sets. The training set was used to build an initial logistic regression model (Logistic Regression Model 1) using the LogisticRegression module from scikit-learn. This Logistic Regression Model was then applied to the testing dataset. The purpose of the model was to determine whether a loan to the borrower in the testing set would be low- or high-risk and results are summarized below.
 
@@ -25,5 +28,13 @@ The resampled data was used to build a new logistic regression model (Logistic R
   * Accuracy: Overall was 99%
   * Recall: For the "healthy loan" the score was 99% and for "high-risk loans" the score was 91%.
 
-*
+* Logistic Regression Model (OverSampled Data)
+  * Precision: The logistic regression model fit with oversampled data predicts "healthy loan" with 100% precision and predicts "High-risk loan" at 84%.
+  * Accuracy: Overall 99%
+  * Recall: For both the "healthy loans" and the "high-risk loans" the score was 99%
 
+## Summary
+
+From the results above both logistic regression models performed about the same when predicting "healthy loans" and "high-risk loans". The "Best" overall would be the logistic regression model with the original data, since it outperformed predicting "high-risk loan" compared to the oversampled data by 1%.
+
+If our goal with this model was to predict "healthy loans" we would have hit a home run with either logistic regression models, but since our goal of this model was to predict the credit worthiness of potential borrowers from peer-to-peer lending services, the precision of both model being around 85% is not ideal since its predicting "high-risk loan" we woudl ideally want a precision score of above 95#.
